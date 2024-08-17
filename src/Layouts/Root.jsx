@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 const Root = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <Navber></Navber>
             <div className='min-h-[calc(100vh-274px)]'>
                 <Outlet></Outlet>

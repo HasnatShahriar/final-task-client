@@ -1,13 +1,18 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDP1FKg2rvXASwrhasM9o45B6orY9vdnQs",
-    authDomain: "authentication-fire-base-4562a.firebaseapp.com",
-    projectId: "authentication-fire-base-4562a",
-    storageBucket: "authentication-fire-base-4562a.appspot.com",
-    messagingSenderId: "510848037025",
-    appId: "1:510848037025:web:b4a7eed3ff1e989c3240e0"
-  };
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  export default auth
+  apiKey: "AIzaSyDsjg9sSMs3o7rtUnuUhZXBAD62Tzfj6aQ",
+  authDomain: "pro-product-c9cc2.firebaseapp.com",
+  projectId: "pro-product-c9cc2",
+  storageBucket: "pro-product-c9cc2.appspot.com",
+  messagingSenderId: "34584665120",
+  appId: "1:34584665120:web:020346d1ee41ef29773045"
+};
+
+// Initialize Firebase only if no apps have been initialized yet
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+const auth = getAuth(app);
+
+export default auth;
