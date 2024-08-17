@@ -17,7 +17,7 @@ const Products = () => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/products", {
+        const response = await axios.get("https://pro-product-backend.vercel.app/products", {
           params: {
             page,
             search,
