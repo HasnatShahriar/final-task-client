@@ -4,14 +4,16 @@ import {  signInWithEmailAndPassword , GoogleAuthProvider, signInWithPopup} from
 import { Link } from 'react-router-dom';
 import auth from '../AuthProvider/fire-base-confiq';
 
+
 const Login = () => {
     const [sucessful,SetSucessful]=useState('')
     const [error,setError]=useState('')
     const useReff=useRef(null)
+    const googleProvider=new GoogleAuthProvider()
     
     
     const handleGoogleSignIn = () => {
-        signInWithPopup(auth, GoogleAuthProvider)
+        signInWithPopup(auth,googleProvider )
             .then((result) => {
                 const user = result.user;
                 console.log('User signed in:', user);
