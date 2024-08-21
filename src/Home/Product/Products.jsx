@@ -184,7 +184,7 @@ const Products = () => {
           </div>
         </>
       ) : (
-        <p>No products found.</p>
+        <p>No product found...</p>
       )}
     </div>
   );
